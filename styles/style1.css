@@ -9,16 +9,18 @@ html {
 body {
   /* width: 600px; */
   margin: 30px 50px;
-  /* background-color: #ff9500; */
+  background-color: rgba(0, 0, 0, 0.1); */
   padding: 0 30px 30px 30px; 
-  border: 5px solid black;
+  border: 5px solid rgba(0, 0, 255, 0.3);
 }
 
 p {
   color: black;
 }
 
+
+
 h1 {
-    color: black; 
+    color: rgba(0, 0, 255, 0.3);  /* made color light blue */
     text-align: center; 
 }

@@ -2,13 +2,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trebuchet Project</title>
+    <title>Wind Tunnel Project</title>
     <link href="styles/style2.css" rel="stylesheet" />
 
 </head>
 <body>
     
-    <h1>Trebuchet Project </h1>
+    <h1>Wind Tunnel Project </h1>
     <p> This page is a work in progress. </p>
     <br>
 
@@ -24,45 +24,23 @@
 
 
 
-    <p> The alpha prototype:</p>
+    <p> The Wind Tunnel CAD Model:</p>
     <img
-    src="images/TrebuchetPrototype.jpg"
+    src="images/WindTunnelCAD.jpg"
     alt=""
     width="400"
     height="400"
-    title="Trebuchet Alpha Prototype" />
+    title="Wind Tunnel CAD Model" />
 
     <br>
 
 
 
-    <p> A SolidWorks model of the trebuchet:</p>
-    <img
-    src="images/CADTrebuchet.png"
-    alt=""
-    width="400"
-    height="400"
-    title="CAD model of the Trebuchet" />
-
-    <br>
-   
-    <p>The completed trebuchet:</p>
-    <img
-    src="images/CompletedTrebuchet.png"
-    alt=""
-    width="400"
-    height="400"
-    title="Completed Trebuchet" />
    
  
     <br>
 
 
-
-
-
-
-    <br>
     <br>
     
     <a href="index.html">Back to home</a> 

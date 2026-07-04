@@ -29,7 +29,7 @@ h1 {
    border: 5px solid rgba(0, 0, 0, 1);/* made color light blue */
 }
 
-
+/*
 .flex-container {
     display: flex;
     justify-content: center;
@@ -37,16 +37,11 @@ h1 {
 }
 
 
-figure {
-  display: flex;
-  flex-direction: column;  /* Stacks image above caption */
-  align-items: center;     /* Centers caption under image */
-  text-align: center;
-}
-
-
+  
 img {
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 100px;
   object-fit: cover;
   }
+
+  */

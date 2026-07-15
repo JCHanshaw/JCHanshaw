@@ -9,7 +9,7 @@
 <body>
     
     <h1>Wind Tunnel Project </h1>
-    <p> This page is a work in progress. </p>
+
     <br>
 
     <h2> Project Overview </h2>
@@ -23,17 +23,29 @@
     <h3> Design Overview </h3>
     <p> For one school project, I worked on a team designing and creating an attachment for an existing wind tunnel. This custom-made attachment contained an airfoil that was configured in such a way that a pair of load cells could measure the lift and drag force that it experienced. The airfoil’s angle of attack could be changed by use of a servo, allowing us to dynamically see how the angle affected the aerodynamic forces that it experienced. This data would be used to calculate the Coefficient of Drag and the Coefficient of Lift. As an additional challenge, our team built an integrated fog generator into the wind tunnel attachment. The fog was distributed along multiple smoke-wires, simultaneously visualizing the airflow and providing a visual indicator as to whether or not the flow was laminar or turbulent. </p>  
 
+    <img src="images/WTFull.png" alt="View of the Final Wind Tunnel Assembly" /> 
+
     <br>
 
     <h3> How It Was Made </h3>
     <p> Creating the wind tunnel attachment took the better part of the school semester. The largest hurdle our team faced was creating the lift and drag force measurement system, as the design requirements were very tricky. The system had to hold the airfoil with a support system that did not introduce significant drag into the system. The measurements from each load cell had to be completely independent: exciting the lift load cell could not alter the measurements of the drag load cell at all. On top of all this, the measurement system had to account for the presence of a servo that could alter the angle of the airfoil at will. After brainstorming multiple different design possibilities, creating numerous free body diagrams, and conducting rigorous background research on this very problem, we finally found a design that fit these requirements. We used a pair of thin, metal rods that would support the airfoil with the smallest possible profile to minimize drag. The rods were connected to a box containing a servo and a rack-and-pinion system capable of altering the angle of attacking. This box was attached to a pair of load cells set up so that each direction of motion was completely decoupled from the other, allowing lift and drag to be measured independently. An Arduino R3 was coded to control the airfoil’s angle of attack and to collect the lift and drag data. The fog generator was created by 3D printing out a casing that held an ultrasonic atomizer that could generate fog from water, a small air pump, and tubing that distributed the fog.  </p>
-
+    <img src="images/WTUnderSide.png" alt="Side View of Lift and Drag Load Cell Assembly" /> 
+    <img src = "images/WTUnderIso.png" alt="Isometric View of Lift and Drag Load Cell Assembly" />
+    <img src = "images/WTSmokewire.png" alt="View of the Airfoil and Smoke Wire Assembly" />
     <br> 
 
     <h3> Verification and Testing </h3>
     <p> The lift and drag forces experienced by the airfoil were collected from the system and imported into MATLAB. The lift and drag coefficients could be calculated by means of a simple pair of formulas: </p>
 
-    <img src="images/LiftDragCoeff.png" alt="" /> 
+    <!-- <img src="images/LiftDragCoeff.png" alt="" />  --> 
+
+
+    <img
+    src="images/LiftDragCoeff.png"
+    alt=""
+    width="400"
+    height="400"
+    title="Lift and Drag Coefficient Formulas" />
 
     <p> In both formulas, C is the coefficient of lift/drag, F is the lift/drag force, V is the velocity of air, the Greek letter rho is the density of air, and A is the area of the airfoil. All of this data was known to our team, all that was left was to crunch the numbers. But how to verify our data? During our research, we found a database of different types of airfoils and how they performed at different Reynolds numbers [1]. Our airfoil is based after a NACA 4415 airfoil. The Reynolds number of our simulation could be calculated with the following formula:  </p>
 
@@ -50,7 +62,7 @@
     <p> What is the significance of all this? Firstly, when designing aircraft, it is important to recognize the effect that the angle of attack will have on both the lift and drag of the system. A higher angle will increase the lift experienced, but it will also increase the drag. However, through experimentation, the optimal angle can be found. This project was also an important lesson in the importance of accounting for the sensitivity of your measuring equipment, as the right tool for the wrong job cannot help you. </p>
 
     <h3> References </h3>
-    <p> [1] “NACA 4415,” Airfoil Tools. Accessed: May 04, 2026. [Online]. Available: <a href="http://airfoil-tools.com/airfoil/details?airfoil=naca4415-il" >http://airfoil-tools.com/airfoil/details?airfoil=naca4415-il</a> </p>
+    <p> [1] “NACA 4415,” Airfoil Tools. Accessed: May 04, 2026. [Online]. Available: <a href="http://airfoiltools.com/airfoil/details?airfoil=naca4415-il" >http://airfoiltools.com/airfoil/details?airfoil=naca4415-il</a> </p>
 
 
 

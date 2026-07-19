@@ -32,16 +32,16 @@ h1 {
 
 .flex-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    flex-direction: row;  /* Stacks image above caption */
+    align-items: center;     /* Centers caption under image */
     gap: 20px;
 }
 
 
 figure {
   display: flex;
-  flex-direction: row;  /* Stacks image above caption */
-  align-items: center;     /* Centers caption under image */
   text-align: center;
 }
 

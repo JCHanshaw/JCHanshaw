@@ -3,8 +3,8 @@ html {
   font-size: 21px;
   /* Replace PLACEHOLDER with the font-family property value you got from Google Fonts */
   font-family: "Roboto", sans-serif;
-  max-width: 1200px;
-  
+  max-width: 3400px; /* Set a maximum width for the entire page */
+
 }
 
 

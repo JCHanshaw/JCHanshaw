@@ -38,7 +38,7 @@ h1 {
 }
 
 
-.figure {
+figure {
   display: flex;
   flex-direction: column;  /* Stacks image above caption */
   text-align: center;

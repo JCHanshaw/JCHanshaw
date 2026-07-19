@@ -36,9 +36,12 @@ h1 {
   flex-wrap: wrap;
   flex-direction: row;  
   gap: 20px;
-
+  align-items: baseline; /* Aligns items along the baseline of the container */
   justify-content: space-evenly; /* Distributes space evenly between items */
 }
+
+
+
 
 
 figure {
@@ -46,6 +49,13 @@ figure {
   flex-direction: column;  /* Stacks image above caption */
   text-align: center;
   align-items: center;     /* Centers caption under image */
+
+}
+
+
+figcaption {
+  font-weight: bold ; 
+  margin-top: 10px; /* Adds space between image and caption */
 
 }
 

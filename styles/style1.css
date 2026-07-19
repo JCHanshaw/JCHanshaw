@@ -3,6 +3,8 @@ html {
   font-size: 21px;
   /* Replace PLACEHOLDER with the font-family property value you got from Google Fonts */
   font-family: "Roboto", sans-serif;
+  max-width: 1200px;
+  
 }
 
 
@@ -31,10 +33,12 @@ h1 {
 
 
 .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;  
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;  
+  gap: 20px;
+
+  justify-content: space-evenly; /* Distributes space evenly between items */
 }
 
 

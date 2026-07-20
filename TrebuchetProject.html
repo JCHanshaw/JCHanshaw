@@ -38,12 +38,57 @@
     <p> Goal: to design and manufacture a small trebuchet capable of launching a cork into a cup. </p>
     <p> Skills: design, SoldWorks, manufacturing. </p>
 
+    <p> For one school assignment, I worked on a team to design a catapult capable of firing a cork into a cup. We could design our catapult however we wanted, but our teacher warned us that he had never seen a team successfully make a trebuchet. A trebuchet is a complicated machine, using a falling counterweight to swing a double pendulum. I, however, saw this as a way to push myself, so I opted to design a trebuchet. Our team used many different techniques to create the initial design, such as brainwriting and weighted analysis. I also researched what caused previous teams to fail and used this knowledge to inform our design. We used SolidWorks to model the trebuchet, making sure it fit within the size requirements. Finally, we assembled our design. On the last day of the project, we had to test our trebuchet in class. Our trebuchet worked perfectly, hitting the target on the first try. This project is one of my personal favorites and taught me a lot about design, CAD, and assembly. </p>
+
     <br> 
 
     <h2> Creating the Trebuchet </h2>
-    <p> For one school assignment, I had to work on a team to design a catapult capable of firing a cork into a cup. We could design our catapult however we wanted, but our teacher warned us that he had never seen a team successfully make a trebuchet. A trebuchet is a complicated machine, using a falling counterweight to swing a double pendulum. I, however, saw this as a way to push myself, so I opted to design a trebuchet. Our team used many different techniques to create the initial design, such as brainwriting and weighted analysis. I also researched what caused previous teams to fail and used this knowledge to inform our design. We used SolidWorks to model the trebuchet, making sure it fit within the size requirements. Finally, we assembled our design. On the last day of the project, we had to test our trebuchet in class. Our trebuchet worked perfectly, hitting the target on the first try. This project is one of my personal favorites and taught me a lot about design. </p>
-    
+    <h3> Defining the Problem</h3>
+    <p> A trebuchet is typically powered by a falling counterweight. It launches its payload by using a fixed arm connected to a sling. The sling-arm combination creates a double pendulum, which, in combination with the falling counterweight, introduces a lot of mechanical complexity to the system. Because I knew that this project had caused a lot of difficulties for previous teams, I decided to do some research so that I would not make the same mistakes. After some investigation, we found out that previous teams failed due to faulty counterweights and poor slings. Our team immediately set out to solve these problems.  </p>
     <br> 
+
+    <h3> The Counterweight</h3>
+    <p> Now that we had an idea of the task we faced, we began our design process. We used several methods to start and refine our design, such as brainwriting and weighted analysis. We also considered the previous failures of other trebuchet designs. One issue faced was that the moving counterweight tended to get caught in other components. To fix this, we decided to 3D print the arm of the trebuchet as well as a case that held the counterweight. That gave us a great deal of control over the dimensions of those components, allowing for tighter tolerancing to prevent failure.  </p>
+    <div class="flex-container">
+        <figure>  <img src="images/Trebuchet/Weight.jpg" alt="" style = "width: 400px; height: 400px;"/>  <figcaption> The Counterweight</figcaption> </figure>
+    </div>
+    <br> 
+    <h3> Payload Release System </h3>
+    <p> Another issue faced was that of friction. The trebuchet needed to swing freely. We found that a polished wooden dowel inside a smooth wooden hole could rotate quite easily, solving this problem. The final issue was that of the sling. Previous groups found that the cork would release from the sling at irregular times, ruining their accuracy. I knew that if we wanted reliability, we couldn’t afford to overengineer this component. We needed mechanical simplicity. Our background research revealed that historically, trebuchets could control the moment they released their payload by use of a sling. One end of the sling was fixed, while the other had a loop in it which was slung around a pin. The angle of the pin would determine when exactly the rope loop would slide off the pin, releasing the payload. To recreate this mechanism, a piece of cloth and fishing line proved to be sufficient. However, the cork’s starting position needed to be consistent for this to work. We added a wooden dowel that could be used as a “firing pin.” This pin would be quickly pulled out of the system by means of a handle created from fishing line and a rubber band. </p>
+    <div class="flex-container">
+        <figure>  <img src="images/Trebuchet/FirePin.jpg" alt="" />  <figcaption> The Firing Pin</figcaption> </figure>
+        <figure> <img src="images/Trebuchet/Loop.jpg" alt="" /> <figcaption> Sling Pin</figcaption> </figure>
+        <figure> <img src="images/Trebuchet/LoopTension.jpg" alt="" /> <figcaption> Sling and Pin in Action</figcaption> </figure>
+    </div>
+    <p>Once all the major design decisions were made, we used SolidWorks to model the entire trebuchet to make sure it fit within the project size requirements. Now, we could move on to the next stage.  </p>
+    <div class="flex-container">
+        <figure> <img src="images/Trebuchet/CADTrebuchet.png" alt="" /> <figcaption> Trebuchet SolidWorks Model</figcaption> </figure>
+
+    </div>
+    <br> 
+
+    <h3> Testing </h3>
+    <p> After the design was completed, we built the machine and tested it. After a little bit of trial and error, we were able to fire the trebuchet accurately and reliably. The trebuchet had a very flexible design. To make fine adjustments to the firing range of the projectile, we only had to change the angle of the pin which held the sling in place. For large adjustments to the range, the counterweight case could be removed easily, opened up, and filled with heavier or lighter weights. When the final day of the project came, we had to demonstrate our trebuchet to our classmates. The machine performed exactly as planned, hitting our target on the first try.  </p>
+    <div class="flex-container">
+        <figure> <img src="images/Trebuchet/CompletedTrebuchet.png" alt="" /> <figcaption> Completed Trebuchet</figcaption> </figure>
+        <figure> <video width="320" height="240" controls> <source src="images/Trebuchet/SideViewVideo.mp4" type="video/mp4"> Your browser does not support the video tag. </video> <figcaption> Trebuchet on Testing Day</figcaption> </figure>
+        <figure> <video width="320" height="240" controls> <source src="images/Trebuchet/TrebuchetVideo.mp4" type="video/mp4"> Your browser does not support the video tag. </video> <figcaption> Trebuchet on Testing Day</figcaption> </figure>
+    </div>
+    <br> 
+
+    <h3> Mathematical Verification </h3>
+    <p> Now that we had successfully built a trebuchet, we wanted to understand how efficient our design was. We wanted to calculate the theoretical performance of our design and compare that to the actual performance. How could we do this? </p>
+    <p> The simplest way to get a theoretical “top performance” estimate would be to convert all the potential energy stored in the counterweight into kinetic energy possessed by the projectile.  </p>
+    <p> $$ KE = PE $$</p>
+    <p> $$ 0.5 * m_p * v^2 = m_c * g * h $$</p>
+    <p> $$ v = \sqrt{\frac{2 * m_c * g * h}{m_p}} $$</p>
+    <p> This gives us the initial veloicity of the projectile. We can use a simple kinematic range formula to simplify this further. We assume that the projectile is being fired from a point level with the ground and at an angle of 45 degrees. </p>
+    <p> $$ R = \frac{v^2 * sin(2 * \theta)}{g} = \frac{v^2}{g}  $$</p>
+    <p> Substituting the expression for v, we get a remarkably simple formula: </p>
+    <p> $$ R = \frac{2 * m_c * h}{m_p} $$</p> 
+    <p> Curiously, the range of a trebuchet is independent of the acceleration due to gravity. </p>
+    <p> Using the physical properties of our design, we can estimate the actual performance and compare it to the theoretical value. This gave us a theoretical range of 27 meters. This is far from the actual range achieved during testing. This discrepancy is due to a number of reasons. One, air resistance was not accounted for in the original calculation, and neither are any other frictional effects. Two, the counterweight is still in motion by the time the projectile is released, meaning that not all of the energy is transfered to the projectile. </p>
+
 
     <h2> Gallery </h2>
   
@@ -52,54 +97,15 @@
 
     <div class="flex-container">
         <figure>  <img src="images/Trebuchet/TrebuchetPrototype.jpg" alt="" style = "width: 400px; height: 400px;"/>  <figcaption> Trebuchet Alpha Prototype</figcaption> </figure>
-        <figure> <img src="images/Trebuchet/CADTrebuchet.png" alt="" /> <figcaption> Trebuchet SolidWorks Model</figcaption> </figure>
         <figure> <img src="images/Trebuchet/CompletedTrebuchet.png" alt="" /> <figcaption> Completed Trebuchet</figcaption> </figure>
-        <figure> <video width="320" height="240" controls> <source src="images/TrebuchetVideo.mp4" type="video/mp4"> Your browser does not support the video tag. </video> <figcaption> Trebuchet on Testing Day</figcaption> </figure>
+        <figure> <video width="320" height="240" controls> <source src="images//Trebuchet/TrebuchetVideo.mp4" type="video/mp4"> Your browser does not support the video tag. </video> <figcaption> Trebuchet on Testing Day</figcaption> </figure>
     </div>
 
 
 
-    <!--
-    <p> The trebuchet alpha prototype:</p>
-    <img
-    src="images/TrebuchetPrototype.jpg"
-    alt=""
-    width="400"
-    height="400"
-    title="Trebuchet Alpha Prototype" />
+
 
     <br>
-
-    
-
-    <p> A SolidWorks model of the trebuchet:</p>
-    <img
-    src="images/CADTrebuchet.png"
-    alt=""
-    width="400"
-    height="400"
-    title="CAD model of the Trebuchet" />
-
-    <br>
-   
-    <p>The completed trebuchet:</p>
-    <img
-    src="images/CompletedTrebuchet.png"
-    alt=""
-    width="400"
-    height="400"
-    title="Completed Trebuchet" />
-   
-    <br> 
-
-    <p>The trebuchet in action:</p>
-    <video width="320" height="240" controls> <source src="images/TrebuchetVideo.mp4" type="video/mp4"> Your browser does not support the video tag. </video>
-    -->
-    <br>
-
-
-    <p> When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$ </p>
 
 
 

@@ -16,7 +16,7 @@ body {
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px; 
 
-  border: 5px solid rgba(0, 0, 0, 0); /* With transparency set to 0, the border is invisible */
+  border: 0px solid rgba(0, 0, 0, 0); /* With transparency set to 0, the border is invisible */
 }
 
 
@@ -37,6 +37,10 @@ h1 {
   border: 5px solid rgba(0, 0, 0, 1);
 }
 
+h2{
+  margin: 30px; 
+  padding: 30px 30px 30px 30px; 
+}
 
 .flex-container {
   display: flex;
@@ -99,6 +103,11 @@ ul{
   display: flex; 
 
 }
+
+ul li {
+  float: left;
+}
+
 
 ul li a {
   display: block;

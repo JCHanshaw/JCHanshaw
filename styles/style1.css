@@ -1,7 +1,7 @@
 html {
   /* px means "pixels". The base font size is now 21 pixels high */
   font-size: 21px;
-  /* Replace PLACEHOLDER with the font-family property value you got from Google Fonts */
+
   font-family: "Roboto", sans-serif;
 
 }
@@ -12,7 +12,7 @@ body {
   margin: 30px 50px;
   background-color: rgba(255, 255, 255, 1); 
   padding: 30px 30px 30px 30px; 
-  border: 5px solid rgba(0, 0, 0, 0);/* made color light blue */
+  border: 5px solid rgba(0, 0, 0, 0); /* With transparency set to 0, the border is invisible */
 }
 
 
@@ -27,7 +27,7 @@ h1 {
     color: rgb(0, 0, 0);  
     text-align: center; 
     padding: 30px 30px 30px 30px; 
-   border: 5px solid rgba(0, 0, 0, 1);/* made color light blue */
+   border: 5px solid rgba(0, 0, 0, 1);
 }
 
 
@@ -54,7 +54,7 @@ figure {
 
 
 figcaption {
-  font-weight: bold ; 
+  font-weight: bold ; /* makes captions bold */
   margin-top: 10px; /* Adds space between image and caption */
 
 }
@@ -63,18 +63,32 @@ figcaption {
 img {
   /* width: 300px;
   height: 300px; */
-  object-fit: cover;
+  object-fit: cover; /* fils container but keeps the aspect ratio the same */
   border: 5px solid rgba(0, 0, 0, 1); /*  added border to images */
 
 }
   
+/* Thanks to https://www.w3schools.com/css/css_navbar_horizontal.asp for help with making the nav bar */   
   
-  
-  
-nav{ 
-  color: rgb(85, 85, 85); 
-  display: flex;
-  flex-direction: row;  
-  gap: 20px;
+ul{
+  margin: 0; 
+  padding: 0; 
 
+  list-style-type: none;  /* Removes default bullet points */
+
+  background-color: rgb(126, 126, 126); /* Sets background color */
+
+  display: flex; 
+
+}
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 20px 24px;
+  text-decoration: none; /* removes underline from links */
+}
+
+ul li a:hover {
+  background-color: #111111; /* makes the links change color when hovered over with mouse*/
 }

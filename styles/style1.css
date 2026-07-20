@@ -66,9 +66,11 @@ img {
   object-fit: cover;
   border: 5px solid rgba(0, 0, 0, 1); /*  added border to images */
 
-  }
-
-
+}
+  
+  
+  
+  
 nav{ 
   color: rgb(85, 85, 85); 
   display: flex;

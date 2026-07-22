@@ -97,6 +97,8 @@ nav /* this will make the nav bar stay at the top of the page when scrolling dow
    position: fixed;
    top: 0px;
    width: 100%; 
+   z-index: 1000; /* Ensures the nav bar stays on top of other content */
+   
 
 }
 

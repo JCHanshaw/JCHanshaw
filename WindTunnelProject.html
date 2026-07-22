@@ -7,6 +7,7 @@
 
 </head>
 
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
 <body>
 
@@ -29,11 +30,6 @@
     <p> Goal: to design a measurement device capable of measuring the lift and drag of an airfoil inside of a wind tunnel as a function of the angle of attack.  </p>
     <p> Skills: Design, coding, CAD, manufacturing. </p> 
     <br> 
-
-    
-    <h2> Project Details </h2>
-
-    <h3> Design Overview </h3>
     <p> For one school project, I worked on a team designing and creating an attachment for an existing wind tunnel. This custom-made attachment contained an airfoil that was configured in such a way that a pair of load cells could measure the lift and drag force that it experienced. The airfoil’s angle of attack could be changed by use of a servo, allowing us to dynamically see how the angle affected the aerodynamic forces that it experienced. This data would be used to calculate the Coefficient of Drag and the Coefficient of Lift. As an additional challenge, our team built an integrated fog generator into the wind tunnel attachment. The fog was distributed along multiple smoke-wires, simultaneously visualizing the airflow and providing a visual indicator as to whether or not the flow was laminar or turbulent. </p>  
 
 
@@ -41,75 +37,61 @@
         <figure>  <img src="images/WindTunnel/WTFull.png" alt="" />  <figcaption> View of the Final Wind Tunnel Assembly </figcaption> </figure>
     </div>
 
-
-    <!-- <img src="images/WTFull.png" alt="View of the Final Wind Tunnel Assembly" /> --> 
-
-    <br>
-
-    <h3> How It Was Made </h3>
-    <p> Creating the wind tunnel attachment took the better part of the school semester. The largest hurdle our team faced was creating the lift and drag force measurement system, as the design requirements were very tricky. The system had to hold the airfoil with a support system that did not introduce significant drag into the system. The measurements from each load cell had to be completely independent: exciting the lift load cell could not alter the measurements of the drag load cell at all. On top of all this, the measurement system had to account for the presence of a servo that could alter the angle of the airfoil at will. After brainstorming multiple different design possibilities, creating numerous free body diagrams, and conducting rigorous background research on this very problem, we finally found a design that fit these requirements. We used a pair of thin, metal rods that would support the airfoil with the smallest possible profile to minimize drag. The rods were connected to a box containing a servo and a rack-and-pinion system capable of altering the angle of attacking. This box was attached to a pair of load cells set up so that each direction of motion was completely decoupled from the other, allowing lift and drag to be measured independently. An Arduino R3 was coded to control the airfoil’s angle of attack and to collect the lift and drag data. The fog generator was created by 3D printing out a casing that held an ultrasonic atomizer that could generate fog from water, a small air pump, and tubing that distributed the fog.  </p>
-   
-    <!--    <img src="images/WTUnderSide.png" alt="Side View of Lift and Drag Load Cell Assembly" /> 
-    <img src = "images/WTUnderIso.png" alt="Isometric View of Lift and Drag Load Cell Assembly" />
-    <img src = "images/WTSmokewire.png" alt="View of the Airfoil and Smoke Wire Assembly" />
-    -->
-
-
+    <br> 
+    <h2> Creating the Wind Tunnel Attachment </h2>
+    <h3> Measurement System </h3>
+    <p> The largest hurdle our team faced was creating the lift and drag force measurement system, as the design requirements were very tricky. The system had to hold the airfoil with a support system that did not introduce significant drag into the system. The measurements from each load cell had to be completely independent: exciting the lift load cell could not alter the measurements of the drag load cell at all. On top of all this, the measurement system had to account for the presence of a servo that could alter the angle of the airfoil at will. After brainstorming multiple different design possibilities, creating numerous free body diagrams, and conducting rigorous background research on this problem, we finally found a design that fit these requirements. We used a pair of thin, metal rods that would support the airfoil with the smallest possible profile to minimize drag. The rods were connected to a box containing a servo and a rack-and-pinion system capable of altering the angle of attacking. This box was attached to a pair of load cells set up so that each direction of motion was completely decoupled from the other, allowing lift and drag to be measured independently.  </p>
 
     <div class="flex-container">
         <figure>  <img src="images/WindTunnel/WTUnderSide.png" alt="" />  <figcaption> Side View of Lift and Drag Load Cell Assembly</figcaption> </figure>
         <figure> <img src="images/WindTunnel/WTUnderIso.png" alt="" /> <figcaption> Isometric View of Lift and Drag Load Cell Assembly</figcaption> </figure>
         <figure> <img src="images/WindTunnel/WTSmokewire.png" alt="" /> <figcaption> View of the Airfoil and Smoke Wire Assembly </figcaption> </figure>
     </div>
-
-
-
-
-
-
-
     <br> 
+
+    <h3> Fog Generator </h3>
+    <p> Our team’s first fog generator design used a heating element inside of a container that held “fog juice,” a mixture of water and glycerin. However, we eventually decided that having a heating element was a safety risk, especially given that much of our design was 3D printed. If components started to melt, water leakage could damage the electrical components in the system. Taking inspiration from essential oil diffusers, our team eventually decided to use an ultrasonic atomizer that could generate fog from water. This device, when submerged, vibrates at high frequencies, forcing water through a small mesh, creating a fine mist. Crucially, the ultrasonic atomizer does not rely on a heating element, making this the safer choice. This atomizer was placed inside an airtight container connected to a small air pump and tubing that distributed the fog. Thus, the fog generator was complete. </p>
+
+    <div class="flex-container">
+        <figure> <img src="images/WindTunnel/WTFogGenerator.jpg" alt="" /> <figcaption> The Fog Generator </figcaption> </figure> 
+        <figure> <img src="images/WindTunnel/WTSmokewire.png" alt="" /> <figcaption> View of the Airfoil and Smoke Wire Assembly </figcaption> </figure>
+    </div>
+    <br> 
+
+    <h3> Electrical Systems </h3>
+    <p>  An Arduino R3 was coded to control the airfoil’s angle of attack and to collect the lift and drag data. The code looped through a sequence of modifying the angle of the servo, waiting for the airfoil to stabilize, and recording the output of the two load cells. Each load cell was connected to an HX711 Amplifier, which were connected to the Arduino. The Arduino also provided power for the air pump in the fog generator. </p> 
+    <div class="flex-container">
+        <figure> <img src="images/WindTunnel/WTWiring.png" alt="" /> <figcaption> The Wiring Schematic for the Wind Tunnel </figcaption> </figure>
+    </div>
+    <br> 
+
+    <h3> Final Assembly </h3>
+    <p> After all the components were designed, we used SolidWorks to model the assembly. Many of the components had to be 3D printed. Once printed, they were secured together with bolts. 
+    <br> 
+
+    <div class="flex-container">
+        <figure>  <img src="images/WindTunnel/WTCADColorized.png" alt="" />  <figcaption> The Final Wind Tunnel CAD Model</figcaption> </figure>
+        <figure> <img src="images/WindTunnel/WTCADTransparent.png" alt="" /> <figcaption> The Final Wind Tunnel CAD Model Transparent View</figcaption> </figure>
+    </div>
+    <br> 
+
 
     <h3> Verification and Testing </h3>
     <p> The lift and drag forces experienced by the airfoil were collected from the system and imported into MATLAB. The lift and drag coefficients could be calculated by means of a simple pair of formulas: </p>
 
-    <!-- <img src="images/LiftDragCoeff.png" alt="" />  --> 
-
-
-    <div class="flex-container">
-        <figure>  <img src="images/WindTunnel/LiftDragCoeff.png" alt="" style = "width: 250px ; height: 250px;"/>  <figcaption>  </figcaption> </figure>
-    </div>
-
-    <!-- 
-    <img
-    src="images/LiftDragCoeff.png"
-    alt=""
-    width="200"
-    height="200"
-    title="Lift and Drag Coefficient Formulas" />
-    -->
+    <p> $$ C_L = \frac{2F_L }{\rho V^2 A} $$ </p>
+    <p> $$ C_D = \frac{2F_D }{\rho V^2 A} $$ </p>
 
     <p> In both formulas, C is the coefficient of lift/drag, F is the lift/drag force, V is the velocity of air, the Greek letter rho is the density of air, and A is the area of the airfoil. All of this data was known to our team, all that was left was to crunch the numbers. But how to verify our data? During our research, we found a database of different types of airfoils and how they performed at different Reynolds numbers [1]. Our airfoil is based after a NACA 4415 airfoil. The Reynolds number of our simulation could be calculated with the following formula:  </p>
-
-    <div class="flex-container">
-        <figure>  <img src="images/WindTunnel/ReynoldsNumber.png" alt="Formula for Reynolds Number"  />  <figcaption>  </figcaption> </figure>
-    </div>
+        
+    <p> $$ Re = \frac{\rho v l}{\mu} $$    </p>
 
 
-
-
-    <!-- <img src="images/ReynoldsNumber.png" alt="Formula for Reynolds Number" /> -->
 
     <p> Where rho, v, l, and mu are the air density, air velocity, characteristic length of the airfoil, and dynamic viscosity respectively. After this was calculated, our calculated values were compared to the theoretical values from the online database. The data in blue were the values from the database, and the values and red were the values calculated by our team. </p>
 
-
-    <!-- 
-    <img src="images/CDvsA1.png" alt="Graph of Coefficient of Drag and Lift vs. Angle of Attack" /> 
-    <img src="images/CDvsA2.png" alt="Graph of the Coefficient of lift divided by the Coeff`icient of Drag vs. Angle of Attack" /> 
-    -->
-
     <div class="flex-container">
-        <figure>  <img src="images/WindTunnel/WindTunnel/CDvsA1.png" alt="" />  <figcaption> Graph of Coefficient of Lift vs. Angle of Attack </figcaption> </figure>
+        <figure>  <img src="images/WindTunnel/CDvsA1.png" alt="" />  <figcaption> Graph of Coefficient of Lift vs. Angle of Attack </figcaption> </figure>
         <figure> <img src="images/WindTunnel/CDvsA2.png" alt="" /> <figcaption> Graph of Coefficient of Drag vs. Angle of Attack</figcaption> </figure>
         <figure> <img src="images/WindTunnel/CDCL.png" alt="" /> <figcaption> Graph of the Coefficient of lift divided by the Coefficient of Drag vs. Angle of Attack </figcaption> </figure>
     </div>
@@ -129,34 +111,6 @@
     <h2> Gallery </h2>
 
 
-    <!--
-    <p> The Final Wind Tunnel CAD Model:</p>
-    <img src="images/WTCADColorized.png" alt="" /> 
-    <br>
-
-    <p> The Final Wind Tunnel CAD Model Transparent View:</p>
-    <img
-    src="images/WTCADTransparent.png"
-    alt=""
-    width="400"
-    height="400"
-    title="Wind Tunnel CAD Model" />
-    <br>
-
-    <p> The Fog Generator:</p>
-    <img src = "images/WTFogGenerator.jpg" alt="" />
-    <br> 
-
-    <p> Wiring Schematic for the Wind Tunnel:</p>
-    <img src = "images/WTWiring.png" alt="" />
-    -->
-
-    <div class="flex-container">
-        <figure>  <img src="images/WindTunnel/WTCADColorized.png" alt="" />  <figcaption> The Final Wind Tunnel CAD Model</figcaption> </figure>
-        <figure> <img src="images/WindTunnel/WTCADTransparent.png" alt="" /> <figcaption> The Final Wind Tunnel CAD Model Transparent View</figcaption> </figure>
-        <figure> <img src="images/WindTunnel/WTFogGenerator.jpg" alt="" /> <figcaption> The Fog Generator </figcaption> </figure> 
-        <figure> <img src="images/WindTunnel/WTWiring.png" alt="" /> <figcaption> The Wiring Schematic for the Wind Tunnel </figcaption> </figure>
-    </div>
 
    
  

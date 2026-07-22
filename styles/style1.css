@@ -82,6 +82,7 @@ figcaption {
 img {
   /* width: 300px;
   height: 300px; */
+  max-width: 500px; /* Ensures images don't exceed 500px in width */
   object-fit: cover; /* fils container but keeps the aspect ratio the same */
   border: 5px solid rgba(0, 0, 0, 1); /*  added border to images */
 

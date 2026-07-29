@@ -1,8 +1,97 @@
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum Height of a Model Rocket</title>
+    <link href="styles/style1.css" rel="stylesheet" />
 
+</head>
 
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
 
 
+<body> 
+    <nav> 
+        <ul>
+            <li>  <a href="index.html"> Home </a>  </li>
+            <li> <a href = "TrebuchetProject.html"> Trebuchet Project  </a> </li>
+            <li> <a href="WindTunnelProject.html">Wind Tunnel Project</a> </li>
+            <li> <a class="active" href="RocketProject.html">Rocket Project</a> </li>
+        </ul>
+    </nav>
 
-<p> $$ \begin{table}[] \begin{table}[] \begin{tabular}{lll} Property Name & Symbol & Value \\ Initial Mass of System & m_0 & 59 g \\ Final Mass & m_f & 51 g \\ Total Impulse & I_t & 5 N-s \\ Thrust Duration & t & 0.8 s \end{tabular} \end{table} \end{table} $$ </p> 
+    
+    <h1> Maximum Height of a Model Rocket </h1>
+    <h2> Project Overview </h2>
+    <p> Goal: to predict the performance of a model rocket, launch the rocket, and compare the calculated performance to the measured, actual performance. </p>
+    <p> Skills: Kinematics, Rocketry, Calculus. </p>
+
+
+    <h2> Introduction </h2>
+
+    <p> When I was much younger, I had a small collection of model rockets that I liked to launch. They were small cardboard contraptions, guided by balsa wood fins and powered by solid rocket motors. I have wanted to get back into amateur rocketry for a while now, so I recently decided to dig back out my old collection. After finding a rocket that was still in reasonably good condition, it occurred to me that I could use my engineering knowledge to predict how high this rocket could actually launch. My plan was to calculate the maximum flight altitude and compare this to the actual altitude. </p>
+    <h2> Physical Attributes of the Rocket </h2>
+    <p>To start my calculations, I had to get some measurements that I could start from. Using a kitchen scale, I weighed all my components. A used rocket motor was left over in my supplies. Subtracting the weight of the used motor from the new motor would reveal the propellant mass, a crucial value for our calculations. The specific motor I was using was a Estes’s B6-4 Engine. While they are described as engines on their <a href="https://estesrockets.com/products/b6-4-engines">website</a>, I will use the word motor to describe the rocket’s means of propulsion. This is because, historically, rocket motors use solid fuel, while engines are powered by liquid fuel (Rocket Propulsion Elements). The Estes website is also where I found the motor’s total impulse and thrust duration. The following table describes all the physical attributes of the model rocket.  </p>
+    <p> $$ \[ \begin{array}[] \begin{tabular}{lll} Property Name & Symbol & Value \\ Initial Mass of System & m_0 & 59 g \\ Final Mass & m_f & 51 g \\ Total Impulse & I_t & 5 N-s \\ Thrust Duration & t & 0.8 s \end{array} \] $$ </p> 
+
+    <h2> Calculating the Maximum Altitude </h2>
+    <p> With some numbers to work with, I could start to examine the mathematical side of things. My general plan going into this was to start by finding the acceleration of the rocket due to the motor and then use kinematics to find the maximum altitude. A couple of rocketry equations are useful here. The effective exhaust velocity tells us, on average, how fast the fuel leaves the rocket motor. </p>
+    <p> $$ c = I_sg $$ </p>
+    <p> In this equation, $ I_s $ is the specific impulse of the rocket. This is calculated rather simply.  </p>
+    <p> $$ I_s = \frac{I_t}{m_pg} $$  </p>
+    <p> As seen, the specific impulse relates the weight of the propellant to the total impulse. Substituting the two equations simplifies things: </p>
+    <p> $$ c = \frac{I_t}{m_p} = \frac{5}{0.008} s = 625 s$$  </p>
+    <p>Now that the effective exhaust velocity is calculated, the vehicle velocity increase can be calculated. As the name suggests, this the exact value by which the vehicle’s velocity increases over the course of its flight. If the starting velocity is 0, then it is also the final velocity of the vehicle at the time of motor burnout.   </p>
+    <p> $$ \delta v = c ln \frac{m_0}{m_f} = 625 ln \frac{59}{51} \frac{m}{s} = 91.07 \frac{m}{s} $$ </p>
+    <p>At this point, the calculations transition from general rocketry equations over to the field of kinematics. From the previous equation, we can see that the rocket accelerates from 0 m/s to 114 m/s. While not a particularly elegant solution, we can average this acceleration out to get a general approximation of the rocket’s behavior.  </p>
+    <p> $$ a_{average} = \frac{\delta v }{\delta t} = \frac{92.07}{0.8} \frac{m}{s^2} $$ </p>
+    <p> From $ 0 \leq t \leq 0.8 s $, the rocket experiences this average acceleration. Using a basic kinematics equation, we can find the height of the rocket at 0.8 s.  </p>
+    <p> $$ y = y_0 + v_0 t + 0.5 a_y t^2 $$ </p>
+    <p>$y $ is the height of the rocket, $v_0$ is the initial velocity, and $ t$ is the time. Note that $ a_y $ and $ a_{average} $ are the same. Because the initial velocity and height are equal to zero, we can simplify:   </p>
+    <p> $$ y = 0.5 a_y t^2 = 0.5(113.84)(0.8^2) m = 36.43 m $$  </p>
+    <p> Note that this height is not the maximum height of the rocket, it is merely the rocket’s height at burn out. It is still traveling at 91.07 m/s at this point, meaning that the final altitude will be quite a bit higher. At this point, we will perform a bit of kinematic trickery. In the previous problem, we assumed that at $ t = 0 $, the rocket’s height and velocity were also equal to zero. Also note that at the moment of engine burnout, the acceleration of the rocket switches from accelerating upward to accelerating downward, as the motor is no longer powering the rocket, and gravity has taken back control. We will now go through the exact same problem-solving process, but this time, our starting point ($t = 0$) is the moment the motor burns out, meaning that our initial velocity and height are different. Referencing the earlier equation, </p>
+    <p> $$ y = y_0 + v_0 t + 0.5 a_y t^2 $$  </p>
+    <p> We can see that we have all the necessary variables to solve except for $t$. At what time does the rocket reach the maximum altitude? To solve this, we can take the derivative of the height equation with respect to time. This gives us this equation: </p>
+    <p> $$ \dot{y} = v_0 + a_y t $$  </p>
+    <p> Note that $ \dot{y} $  is the derivative of position, which is the same as the velocity of the rocket. The rocket reaches its maximum height right before it begins falling back down towards the ground. In other words, the rocket’s velocity is equal to zero the moment it reaches its maximum velocity.  </p>
+    <p> $$ 0 = v_0 + a_y t $$ </p>
+    <p>$$ t = \frac{-v_0}{a_y} = \frac{ -91.07}{-9.81}  s = 9.28 s $$  </p>
+    <p> It is important to note that this is the time after burnout, not the time after launch. We can use this value in the previously established equation for height.   </p>
+    <p>$$ y = y_0 + v_0 t + 0.5 a_y t^2 = 36.43 m + 91.07(9.28) m + 0.5(-9.81)(9.28) m = 459.15 m  $$  </p>
+    <p> Thus, we have calculated the maximum height our rocket will travel. It will reach this height after 10.08 seconds, which can be found by adding the time of thrust duration to the time from burnout to max height (0.8 s + 9.28 s = 10.08 s).  </p>
+    
+    <h2> Sanity Check </h2>
+    <p> After performing all these calculations, can we verify that we are somewhat close to the actual rocket’s performance before we launch it? After searching online, I found my exact <a href="https://www.midwesttechnology.com/estes-generic-ex2-rocket/">rocket</a>. According to the manufacturers, this rocket can reach a maximum height of 335 meters. This is far below what we calculated. How can this be? For starters, our calculations ignored air resistance, which would slow our rocket and reduce the maximum height. We also assumed that the rocket would travel straight up in a perfect line. If the rocket launched at a slight angle, its maximum height would also be reduced. But perhaps most crucial, we did not account for the deployment of the rocket’s parachute. The rocket’s parachutes deploy four seconds after burnout. However, we calculated that the rocket would coast for at least nine seconds before starting the descend. We can roughly approximate the effect the parachute will have on the rocket if we assume that the rocket stops traveling upward the moment the parachute deploys. If we redo our final calculation, replacing 9.28 seconds with 4 seconds, we get a different max height: </p>
+    <p> $$ y = 36.43 m + 91.07(4) m + 0.5(-9.81)(4) m = 322.23 m  $$ </p>
+    <p> This is much closer to the manufacturers’ calculated max height, only off by four percent.  </p>
+    <h2> The Real Launch </h2>
+    <p> COMING SOON </p>
+
+
+    
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>
+

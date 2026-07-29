@@ -40,23 +40,23 @@
     <h2> Calculating the Maximum Altitude </h2>
     <p> With some numbers to work with, I could start to examine the mathematical side of things. My general plan going into this was to start by finding the acceleration of the rocket due to the motor and then use kinematics to find the maximum altitude. A couple of rocketry equations are useful here. The effective exhaust velocity tells us, on average, how fast the fuel leaves the rocket motor. </p>
     <p> $$ c = I_sg $$ </p>
-    <p> In this equation, $ I_s $ is the specific impulse of the rocket. This is calculated rather simply.  </p>
+    <p> In this equation, $$ I_s $$ is the specific impulse of the rocket. This is calculated rather simply.  </p>
     <p> $$ I_s = \frac{I_t}{m_pg} $$  </p>
     <p> As seen, the specific impulse relates the weight of the propellant to the total impulse. Substituting the two equations simplifies things: </p>
     <p> $$ c = \frac{I_t}{m_p} = \frac{5}{0.008} s = 625 s$$  </p>
     <p>Now that the effective exhaust velocity is calculated, the vehicle velocity increase can be calculated. As the name suggests, this the exact value by which the vehicle’s velocity increases over the course of its flight. If the starting velocity is 0, then it is also the final velocity of the vehicle at the time of motor burnout.   </p>
-    <p> $$ \delta v = c ln \frac{m_0}{m_f} = 625 ln \frac{59}{51} \frac{m}{s} = 91.07 \frac{m}{s} $$ </p>
+    <p> $$ \Delta v = c ln \frac{m_0}{m_f} = 625 ln \frac{59}{51} \frac{m}{s} = 91.07 \frac{m}{s} $$ </p>
     <p>At this point, the calculations transition from general rocketry equations over to the field of kinematics. From the previous equation, we can see that the rocket accelerates from 0 m/s to 114 m/s. While not a particularly elegant solution, we can average this acceleration out to get a general approximation of the rocket’s behavior.  </p>
-    <p> $$ a_{average} = \frac{\delta v }{\delta t} = \frac{92.07}{0.8} \frac{m}{s^2} $$ </p>
-    <p> From $ 0 \leq t \leq 0.8 s $, the rocket experiences this average acceleration. Using a basic kinematics equation, we can find the height of the rocket at 0.8 s.  </p>
+    <p> $$ a_{average} = \frac{\Delta v }{\Delta t} = \frac{92.07}{0.8} \frac{m}{s^2} $$ </p>
+    <p> From $$ 0 \leq t \leq 0.8 s $$, the rocket experiences this average acceleration. Using a basic kinematics equation, we can find the height of the rocket at 0.8 s.  </p>
     <p> $$ y = y_0 + v_0 t + 0.5 a_y t^2 $$ </p>
-    <p>$y $ is the height of the rocket, $v_0$ is the initial velocity, and $ t$ is the time. Note that $ a_y $ and $ a_{average} $ are the same. Because the initial velocity and height are equal to zero, we can simplify:   </p>
+    <p>$$ y $$ is the height of the rocket, $v_0$ is the initial velocity, and $$ t $$ is the time. Note that $$ a_y $$ and $$ a_{average} $$ are the same. Because the initial velocity and height are equal to zero, we can simplify:   </p>
     <p> $$ y = 0.5 a_y t^2 = 0.5(113.84)(0.8^2) m = 36.43 m $$  </p>
-    <p> Note that this height is not the maximum height of the rocket, it is merely the rocket’s height at burn out. It is still traveling at 91.07 m/s at this point, meaning that the final altitude will be quite a bit higher. At this point, we will perform a bit of kinematic trickery. In the previous problem, we assumed that at $ t = 0 $, the rocket’s height and velocity were also equal to zero. Also note that at the moment of engine burnout, the acceleration of the rocket switches from accelerating upward to accelerating downward, as the motor is no longer powering the rocket, and gravity has taken back control. We will now go through the exact same problem-solving process, but this time, our starting point ($t = 0$) is the moment the motor burns out, meaning that our initial velocity and height are different. Referencing the earlier equation, </p>
+    <p> Note that this height is not the maximum height of the rocket, it is merely the rocket’s height at burn out. It is still traveling at 91.07 m/s at this point, meaning that the final altitude will be quite a bit higher. At this point, we will perform a bit of kinematic trickery. In the previous problem, we assumed that at $$ t = 0 $$, the rocket’s height and velocity were also equal to zero. Also note that at the moment of engine burnout, the acceleration of the rocket switches from accelerating upward to accelerating downward, as the motor is no longer powering the rocket, and gravity has taken back control. We will now go through the exact same problem-solving process, but this time, our starting point ($t = 0$) is the moment the motor burns out, meaning that our initial velocity and height are different. Referencing the earlier equation, </p>
     <p> $$ y = y_0 + v_0 t + 0.5 a_y t^2 $$  </p>
     <p> We can see that we have all the necessary variables to solve except for $t$. At what time does the rocket reach the maximum altitude? To solve this, we can take the derivative of the height equation with respect to time. This gives us this equation: </p>
     <p> $$ \dot{y} = v_0 + a_y t $$  </p>
-    <p> Note that $ \dot{y} $  is the derivative of position, which is the same as the velocity of the rocket. The rocket reaches its maximum height right before it begins falling back down towards the ground. In other words, the rocket’s velocity is equal to zero the moment it reaches its maximum velocity.  </p>
+    <p> Note that $$ \dot{y} $$  is the derivative of position, which is the same as the velocity of the rocket. The rocket reaches its maximum height right before it begins falling back down towards the ground. In other words, the rocket’s velocity is equal to zero the moment it reaches its maximum velocity.  </p>
     <p> $$ 0 = v_0 + a_y t $$ </p>
     <p>$$ t = \frac{-v_0}{a_y} = \frac{ -91.07}{-9.81}  s = 9.28 s $$  </p>
     <p> It is important to note that this is the time after burnout, not the time after launch. We can use this value in the previously established equation for height.   </p>

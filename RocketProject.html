@@ -35,16 +35,9 @@
     <p> When I was much younger, I had a small collection of model rockets that I liked to launch. They were small cardboard contraptions, guided by balsa wood fins and powered by solid rocket motors. I have wanted to get back into amateur rocketry for a while now, so I recently decided to dig back out my old collection. After finding a rocket that was still in reasonably good condition, it occurred to me that I could use my engineering knowledge to predict how high this rocket could actually launch. My plan was to calculate the maximum flight altitude and compare this to the actual altitude. </p>
     <h2> Physical Attributes of the Rocket </h2>
     <p>To start my calculations, I had to get some measurements that I could start from. Using a kitchen scale, I weighed all my components. A used rocket motor was left over in my supplies. Subtracting the weight of the used motor from the new motor would reveal the propellant mass, a crucial value for our calculations. The specific motor I was using was a Estes’s B6-4 Engine. While they are described as engines on their <a href="https://estesrockets.com/products/b6-4-engines">website</a>, I will use the word motor to describe the rocket’s means of propulsion. This is because, historically, rocket motors use solid fuel, while engines are powered by liquid fuel (Rocket Propulsion Elements). The Estes website is also where I found the motor’s total impulse and thrust duration. The following table describes all the physical attributes of the model rocket.  </p>
-    <p> \[ 
-        \begin{array}{l}
-        \begin{tabular}{lll} 
-        Property Name & Symbol & Value \\ 
-        Initial Mass of System & m_0 & 59 g \\ 
-        Final Mass & m_f & 51 g \\ 
-        Total Impulse & I_t & 5 N-s \\ 
-        Thrust Duration & \Delta t & 0.8 s 
-        \end{array} 
-        \] </p> 
+
+    <p>  \begin{array} {|r|r|}\hline Property Name & Symbol & Value \\ \hline Initial Mass of System & m_0 & 59 g  \\ \hline Final Mass & m_f & 51 g \\ \hline Total Impulse & I_t & 5 N-s \\ \hline Thrust Duration & \Delta t & 0.8 s \\ \hline  \end{array}  </p>
+
 
     <h2> Calculating the Maximum Altitude </h2>
     <p> With some numbers to work with, I could start to examine the mathematical side of things. My general plan going into this was to start by finding the acceleration of the rocket due to the motor and then use kinematics to find the maximum altitude. A couple of rocketry equations are useful here. The effective exhaust velocity tells us, on average, how fast the fuel leaves the rocket motor. </p>

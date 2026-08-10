@@ -31,13 +31,14 @@ p {
 
 
 h1 {
-  color: rgb(0, 0, 0);  
+  color: rgb(248, 244, 244);  
+  background-color: #468db9; /* This is the websites primary color */
   text-align: center; 
 
-  margin: 50px 30px 30px 30px; 
-  padding: 0px; 
+  padding: 100px 100% 50px ;
+  margin: 0px; 
 
-  border: 5px solid rgba(0, 0, 0, 1);
+  border: 0px solid rgba(0, 0, 0, 1);
 }
 
 h2{
@@ -58,9 +59,6 @@ h3 {
   align-items: baseline; /* Aligns items along the baseline of the container */
   justify-content: space-evenly; /* Distributes space evenly between items */
 }
-
-
-
 
 
 figure {
@@ -139,3 +137,9 @@ ul li a.active {
   background-color: #3090df;
 }
 
+
+
+.topBlock {
+  margin: 0px; 
+  padding: 100 px 100%
+}

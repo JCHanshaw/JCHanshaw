@@ -35,7 +35,7 @@ h1 {
   background-color: #297770; /* This is the websites primary color */
   text-align: center; 
 
-  padding: 100px 100% 50px ;
+  padding: 200px 100px 200px ; /* Don't use 100% here, it will remove the text
   margin: 0px; 
 
   border: 0px solid rgba(0, 0, 0, 1);

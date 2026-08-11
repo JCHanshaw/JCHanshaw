@@ -23,7 +23,7 @@ body {
 
 p {
   color: black;
-  margin: 30px; 
+  margin: 10px 100px ;; 
 
 
 }
@@ -34,24 +34,24 @@ h1 {
   color: rgb(248, 244, 244);  
   background-color: #297770; /* This is the websites primary color */
   text-align: center; 
-
-  padding: 200px 100px 200px ; /* Don't use 100% here, it will remove the text
+  margin: 0px 0px 0px 0px;
+  padding: 200px 100px 200px ; /* Don't use 100% here, it will remove the text */
   margin: 0px; 
 
   border: 0px solid rgba(0, 0, 0, 1);
 }
 
 h2{
-  margin: 10px 30px; 
+  margin: 10px 100px ;; 
   padding: 0px; 
 }
 
 h3 {
-  margin: 10px 30px; 
+  margin: 10px 100px ;; 
   padding: 0px; 
 }
 
-.flex-container {
+.flex-container { /* for pictures */ 
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;  
@@ -91,6 +91,35 @@ img {
   
 /* Thanks to https://www.w3schools.com/css/css_navbar_horizontal.asp for help with making the nav bar */   
   
+
+.buttonBox { /* for buttons */
+ 	margin: 100px 100px;
+	font-weight: bold;
+    background-color: white; 
+    display:flex ; 
+    flex-wrap: wrap; 
+    
+    justify-content: center ; 
+    text-align: center
+}
+
+.button {
+  
+  margin: 20px ;
+  padding: 50px ; 
+  background-color: #297770; /* This is the websites primary color */
+  cursor:pointer;
+  text-decoration: none;
+  color: white ; 
+  width: 150px ;
+  border-radius: 20px;
+  font-size: 30px    
+}
+.button:hover {
+  background-color: #45C2B6; /* makes the links change color when hovered over with mouse*/
+}
+
+
 
 
 nav /* this will make the nav bar stay at the top of the page when scrolling down */

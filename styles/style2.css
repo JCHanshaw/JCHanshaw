@@ -1,51 +1,180 @@
+/* this is the same style as style1.css, but the pictures are smaller and have explanatory text next to them. */
+
+
 html {
   /* px means "pixels". The base font size is now 21 pixels high */
   font-size: 21px;
-  /* Replace PLACEHOLDER with the font-family property value you got from Google Fonts */
+
   font-family: "Roboto", sans-serif;
+
 }
 
 
 body {
   /* width: 600px; */
-  margin: 30px 50px;
+  /* margin: 0px 50px 30px 50px; 
+  padding: 30px 30px 30px 30px; */ 
   background-color: rgba(255, 255, 255, 1); 
-  padding: 30px 30px 30px 30px; 
-  border: 5px solid rgba(0, 0, 0, 0);/* made color light blue */
+
+  margin: 0px ;
+  padding: 0px ; 
+
+  border: 0px solid rgba(0, 0, 0, 0); /* With transparency set to 0, the border is invisible */
 }
 
 
 
 p {
   color: black;
+  margin: 10px 100px ;; 
+
+
 }
 
 
 
 h1 {
-    color: rgb(0, 0, 0);  
-    text-align: center; 
-    padding: 30px 30px 30px 30px; 
-   border: 5px solid rgba(0, 0, 0, 1);/* made color light blue */
+  color: rgb(248, 244, 244);  
+  background-color: #297770; /* This is the websites primary color */
+  text-align: center; 
+  margin: 0px 0px 50px 0px;
+  padding: 200px 100px 200px ; /* Don't use 100% here, it will remove the text */
+  margin: 0px; 
+
+  border: 0px solid rgba(0, 0, 0, 1);
+  font-size: 100px; 
 }
 
-/*
-.flex-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+h2{
+  margin: 30px 100px ;; 
+  padding: 0px; 
+}
+
+h3 {
+  margin: 10px 100px ;; 
+  padding: 0px; 
+}
+
+.flex-container { /* for pictures */ 
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;  
+  gap: 20px;
+  align-items: baseline; /* Aligns items along the baseline of the container */
+  justify-content: space-evenly; /* Distributes space evenly between items */
 }
 
 
-  
+figure {
+  display: flex;
+  flex-direction: row;  /* Stacks image above caption */
+  text-align: center;
+  align-items: last baseline;     /* Centers caption under image */
+  max-width: 100%; 
+
+}
+
+
+figcaption { 
+  margin: 0px 0px 0px 30px;
+
+}
+
+.flex-container figure figcaption p {
+    margin: 0px;
+}
+
 img {
-  width: 150px;
-  height: 100px;
-  object-fit: cover;
-  }
+  /* width: 300px;
+  height: 300px; */
+  max-width: 200 px; /* Ensures images don't exceed their container's width */
+  height: auto; /* Maintains aspect ratio */
 
-  */
+  object-fit: cover; /* fils container but keeps the aspect ratio the same */
+  border: 5px solid rgba(0, 0, 0, 1); /*  added border to images */
 
-img { border: 5px solid rgba(0, 0, 0, 1); } 
+}
   
+/* Thanks to https://www.w3schools.com/css/css_navbar_horizontal.asp for help with making the nav bar */   
   
+
+.buttonBox { /* for buttons */
+ 	margin: 100px 100px;
+	font-weight: bold;
+    background-color: white; 
+    display:flex ; 
+    flex-wrap: wrap; 
+    
+    justify-content: center ; 
+    text-align: center
+}
+
+.button {
+  
+  margin: 20px ;
+  padding: 50px ; 
+  background-color: #297770; /* This is the websites primary color */
+  cursor:pointer;
+  text-decoration: none;
+  color: white ; 
+  width: 150px ;
+  border-radius: 20px;
+  font-size: 30px    
+}
+.button:hover {
+  background-color: #45C2B6; /* makes the links change color when hovered over with mouse*/
+}
+
+
+
+
+nav /* this will make the nav bar stay at the top of the page when scrolling down */
+{
+   position: fixed;
+   top: 0px;
+   width: 100%; 
+   z-index: 1000; /* Ensures the nav bar stays on top of other content */
+   
+
+}
+
+
+ul{ /* nav bar styling */
+  margin: 0; 
+  padding: 0; 
+
+  list-style-type: none;  /* Removes default bullet points */
+
+  background-color: #1D514C; /* Sets background color */
+
+  display: flex; 
+
+}
+
+ul li {
+  float: left;
+}
+
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 20px 24px;
+  text-decoration: none; /* removes underline from links */
+}
+
+ul li a:hover {
+  background-color: #111111; /* makes the links change color when hovered over with mouse*/
+}
+
+
+ul li a.active {
+  background-color: #45C2B6;
+}
+
+
+
+.topBlock {
+  margin: 0px; 
+  padding: 100 px 100%
+}

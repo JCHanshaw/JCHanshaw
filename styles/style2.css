@@ -39,7 +39,6 @@ h1 {
   text-align: center; 
   margin: 0px 0px 50px 0px;
   padding: 200px 100px 200px ; /* Don't use 100% here, it will remove the text */
-  margin: 0px; 
 
   border: 0px solid rgba(0, 0, 0, 1);
   font-size: 100px; 
@@ -68,10 +67,9 @@ h3 {
 figure {
   display: flex;
   flex-direction: row;  /* Stacks image above caption */
-  text-align: center;
+  text-align: left;
   align-items: last baseline;     /* Centers caption under image */
   max-width: 100%; 
-
 }
 
 
@@ -87,7 +85,7 @@ figcaption {
 img {
   /* width: 300px;
   height: 300px; */
-  max-width: 200 px; /* Ensures images don't exceed their container's width */
+  max-width: 200px; /* Ensures images don't exceed their container's width */
   height: auto; /* Maintains aspect ratio */
 
   object-fit: cover; /* fils container but keeps the aspect ratio the same */

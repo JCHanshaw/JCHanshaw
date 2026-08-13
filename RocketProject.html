@@ -47,14 +47,17 @@
     <p> As seen, the specific impulse relates the weight of the propellant to the total impulse. Substituting the two equations simplifies things: </p>
     <p> $$ c = \frac{I_t}{m_p} = \frac{5}{0.008} s = 625 s$$  </p>
     <p>Now that the effective exhaust velocity is calculated, the vehicle velocity increase can be calculated. As the name suggests, this the exact value by which the vehicle’s velocity increases over the course of its flight. If the starting velocity is 0, then it is also the final velocity of the vehicle at the time of motor burnout.   </p>
-    <p> $$ \Delta v = c \ln( \frac{m_0}{m_f}) = 625 \ln( \frac{59}{51} )\frac{m}{s}  = 91.07 \frac{m}{s} $$ </p>
+    <p> $$ \Delta v = c \ln( \frac{m_0}{m_f})  $$ </p>
+    <p> $$ 625 \ln( \frac{59}{51} )\frac{m}{s}  = 91.07 \frac{m}{s} $$ </p>
     <p>At this point, the calculations transition from general rocketry equations over to the field of kinematics. From the previous equation, we can see that the rocket accelerates from 0 m/s to 98 m/s. While not a particularly elegant solution, we can average this acceleration out to get a general approximation of the rocket’s behavior.  </p>
-    <p> $$ a_{average} = \frac{\Delta v }{\Delta t} = \frac{92.07}{0.8} \frac{m}{s^2} $$ </p>
+    <p> $$ a_{average} = \frac{\Delta v }{\Delta t}  $$ </p>
+    <p> $$  \frac{92.07}{0.8} \frac{m}{s^2} $$ </p>
     <p> From \( 0 \leq t \leq 0.8 s \), the rocket experiences this average acceleration. Using a basic kinematics equation, we can find the height of the rocket at 0.8 s.  </p>
     <p> $$ y = y_0 + v_0 t + 0.5 a_y t^2 $$ </p>
     <p>\( y \) is the height of the rocket, \(v_0\) is the initial velocity, and \( t \) is the time. Note that \( a_y \) and \( a_{average} \) are the same. Because the initial velocity and height are equal to zero, we can simplify:   </p>
-    <p> $$ y = 0.5 a_y t^2 = 0.5(113.84)(0.8^2) m = 36.43 m $$  </p>
-    <p> Note that this height is not the maximum height of the rocket, it is merely the rocket’s height at burn out. It is still traveling at 91.07 m/s at this point, meaning that the final altitude will be quite a bit higher. At this point, we will perform a bit of kinematic trickery. In the previous problem, we assumed that at \( t = 0 \), the rocket’s height and velocity were also equal to zero. Also note that at the moment of engine burnout, the acceleration of the rocket switches from accelerating upward to accelerating downward, as the motor is no longer powering the rocket, and gravity has taken back control. We will now go through the exact same problem-solving process, but this time, our starting point (\(t = 0\)) is the moment the motor burns out, meaning that our initial velocity and height are different. Referencing the earlier equation, </p>
+    <p> $$ y = 0.5 a_y t^2  $$  </p>
+    <p> $$ y = 0.5(113.84)(0.8^2) m = 36.43 m $$  </p>
+    <p> Note that this height is not the maximum height of the rocket; it is merely the rocket’s height at burn out. It is still traveling at 91.07 m/s at this point, meaning that the final altitude will be quite a bit higher. At this point, we will perform a bit of kinematic trickery. In the previous problem, we assumed that at \( t = 0 \), the rocket’s height and velocity were also equal to zero. Also note that at the moment of engine burnout, the acceleration of the rocket switches from accelerating upward to accelerating downward, as the motor is no longer powering the rocket, and gravity has taken back control. We will now go through the exact same problem-solving process, but this time, our starting point (\(t = 0\)) is the moment the motor burns out, meaning that our initial velocity and height are different. Referencing the earlier equation, </p>
     <p> $$ y = y_0 + v_0 t + 0.5 a_y t^2 $$  </p>
     <p> We can see that we have all the necessary variables to solve, except for \(t\). At what time does the rocket reach the maximum altitude? To solve this, we can take the derivative of the height equation with respect to time. This gives us this equation: </p>
     <p> $$ \dot{y} = v_0 + a_y t $$  </p>
@@ -62,19 +65,22 @@
     <p> $$ 0 = v_0 + a_y t $$ </p>
     <p>$$ t = \frac{-v_0}{a_y} = \frac{ -91.07}{-9.81}  s = 9.28 s $$  </p>
     <p> It is important to note that this is the time after burnout, not the time after launch. We can use this value in the previously established equation for height.   </p>
-    <p>$$ y = y_0 + v_0 t + 0.5 a_y t^2 = 36.43 m + 91.07(9.28) m + 0.5(-9.81)(9.28) m = 459.15 m  $$  </p>
+    <p>$$ y = y_0 + v_0 t + 0.5 a_y t^2  $$  </p>
+    <p> $$ y = 36.43 m + 91.07(9.28) m + 0.5(-9.81)(9.28) m = 459.15 m $$</p>
     <p> Thus, we have calculated the maximum height our rocket will travel. It will reach this height after 10.08 seconds, which can be found by adding the time of thrust duration to the time from burnout to max height (0.8 s + 9.28 s = 10.08 s).  </p>
     
     <h2> Sanity Check </h2>
     <p> After performing all these calculations, can we verify that we are somewhat close to the actual rocket’s performance before we launch it? After searching online, I found my exact <a href="https://www.midwesttechnology.com/estes-generic-ex2-rocket/" target = "_blank" >rocket</a>. According to the manufacturers, this rocket can reach a maximum height of 335 meters. This is far below what we calculated. How can this be? For starters, our calculations ignored air resistance, which would slow our rocket and reduce the maximum height. We also assumed that the rocket would travel straight up in a perfect line. If the rocket launched at a slight angle, its maximum height would also be reduced. But perhaps most crucial, we did not account for the deployment of the rocket’s parachute. The rocket’s parachutes deploy four seconds after burnout. However, we calculated that the rocket would coast for at least nine seconds before starting to descend. We can roughly approximate the effect the parachute will have on the rocket if we assume that the rocket stops traveling upward the moment the parachute deploys. If we redo our final calculation, replacing 9.28 seconds with 4 seconds, we get a different max height: </p>
     <p> $$ y = 36.43 m + 91.07(4) m + 0.5(-9.81)(4) m = 322.23 m  $$ </p>
-    <p> This is much closer to the manufacturers’ calculated max height, which is only off by four percent.  </p>
+    <p> This is much closer to the manufacturers’ calculated max height, and is only off by four percent.  </p>
     <h2> The Real Launch </h2>
     <p> COMING SOON </p>
 
 
     
-
+    <br> <br><br> 
+    <div class = "bar"> </div>
+    
    
 
 

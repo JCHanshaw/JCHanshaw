@@ -57,6 +57,17 @@ h3 {
 /* Thanks to https://www.w3schools.com/css/css_navbar_horizontal.asp for help with making the nav bar */   
 
 
+.bar{
+  margin: auto; 
+  width: 100% ; 
+  background-color: #297770; /* This is the websites primary color */
+  padding: 0 0 100px 
+}
+
+
+
+
+
 .buttonBox { /* for buttons */
  	margin: 100px 100px;
 	font-weight: bold;
@@ -138,6 +149,13 @@ ul li a.active {
   padding: 100 px 100%
 }
 
+video{
+  margin: auto;
+  width: 80% ; 
+  max-width: 300px; 
+  
+}
+
 
 
 /* this part is different from style 2 */
@@ -171,9 +189,9 @@ figcaption {
 img {
   /* width: 300px;
   height: 300px; */
-  max-width: 500px; /* Ensures images don't exceed their container's width */
-  height: auto; /* Maintains aspect ratio */
-
+  max-width: 400px; /* Ensures images don't exceed their container's width */
+  margin: auto;
+  width: 80% ; 
   object-fit: cover; /* fils container but keeps the aspect ratio the same */
   border: 5px solid rgba(0, 0, 0, 1); /*  added border to images */
 

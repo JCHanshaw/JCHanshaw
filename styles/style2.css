@@ -138,7 +138,12 @@ ul li a.active {
   padding: 100 px 100%
 }
 
-
+video{
+  margin: auto;
+  width: 80% ; 
+  max-width: 500px; 
+  
+}
 /*this part is different from style 1 */
 
 .flex-container { /* for pictures */ 
@@ -155,9 +160,9 @@ figure {
   display: flex;
   flex-direction: row;  /* Stacks image above caption */
   text-align: left;
-  align-items: last baseline;     /* Centers caption under image */
-  max-width: 100%; 
-  margin: auto 100px auto 100px;
+  align-items: flex-start;     /* Centers caption under image */
+  width: 80%; 
+  margin: auto;
 }
 
 
@@ -174,7 +179,8 @@ img {
   /* width: 300px;
   height: 300px; */
   max-width: 200px; /* Ensures images don't exceed their container's width */
-  height: auto; /* Maintains aspect ratio */
+  margin: auto;
+  width: 80% ; 
 
   object-fit: cover; /* fils container but keeps the aspect ratio the same */
   border: 5px solid rgba(0, 0, 0, 1); /*  added border to images */

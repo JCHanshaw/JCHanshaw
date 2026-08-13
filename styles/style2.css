@@ -57,9 +57,9 @@ h3 {
 .flex-container { /* for pictures */ 
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;  
+  flex-direction: column;  
   gap: 20px;
-  align-items: baseline; /* Aligns items along the baseline of the container */
+  align-items: flex-start; /* Aligns items along the left side of the container */
   justify-content: space-evenly; /* Distributes space evenly between items */
 }
 
@@ -70,6 +70,7 @@ figure {
   text-align: left;
   align-items: last baseline;     /* Centers caption under image */
   max-width: 100%; 
+  margin: auto 100px auto 100px;
 }
 
 

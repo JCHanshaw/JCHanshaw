@@ -23,7 +23,8 @@ body {
 
 p {
   color: black;
-  margin: 10px 100px ;; 
+  margin: 20px auto 20px auto;
+  width: 80%;
 
 
 }
@@ -34,64 +35,27 @@ h1 {
   color: rgb(248, 244, 244);  
   background-color: #297770; /* This is the websites primary color */
   text-align: center; 
-  margin: 0px 0px 50px 0px;
-  padding: 200px 100px 200px ; /* Don't use 100% here, it will remove the text */
-  
-
+  margin: 0px auto 50px auto;
+  width: 100%;
+  padding: 200px 0px 200px;
   border: 0px solid rgba(0, 0, 0, 1);
-  font-size: 100px; 
+  font-size: 10vw; 
 }
 
 h2{
-  margin: 30px 100px ;; 
   padding: 0px; 
+  margin: 40px auto 0px auto;
+  width: 80%;
 }
 
-h3 {
-  margin: 10px 100px ;; 
+h3 { 
   padding: 0px; 
-}
-
-.flex-container { /* for pictures */ 
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;  
-  gap: 20px;
-  align-items: baseline; /* Aligns items along the baseline of the container */
-  justify-content: space-evenly; /* Distributes space evenly between items */
-}
-
-
-figure {
-  display: flex;
-  flex-direction: column;  /* Stacks image above caption */
-  text-align: center;
-  align-items: center;     /* Centers caption under image */
-  max-width: 100%; 
-
-}
-
-
-figcaption {
-  font-weight: bold ; /* makes captions bold */
-  margin-top: 10px; /* Adds space between image and caption */
-
-}
-
-
-img {
-  /* width: 300px;
-  height: 300px; */
-  max-width: 500px; /* Ensures images don't exceed their container's width */
-  height: auto; /* Maintains aspect ratio */
-
-  object-fit: cover; /* fils container but keeps the aspect ratio the same */
-  border: 5px solid rgba(0, 0, 0, 1); /*  added border to images */
-
+  margin: 40px auto 0px auto;
+  width: 80%;  
 }
   
 /* Thanks to https://www.w3schools.com/css/css_navbar_horizontal.asp for help with making the nav bar */   
-  
+
 
 .buttonBox { /* for buttons */
  	margin: 100px 100px;
@@ -172,4 +136,45 @@ ul li a.active {
 .topBlock {
   margin: 0px; 
   padding: 100 px 100%
+}
+
+
+
+/* this part is different from style 2 */
+.flex-container { /* for pictures */ 
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;  
+  gap: 20px;
+  align-items: baseline; /* Aligns items along the baseline of the container */
+  justify-content: space-evenly; /* Distributes space evenly between items */
+}
+
+
+figure {
+  display: flex;
+  flex-direction: column;  /* Stacks image above caption */
+  text-align: center;
+  align-items: center;     /* Centers caption under image */
+  max-width: 100%; 
+
+}
+
+
+figcaption {
+  font-weight: bold ; /* makes captions bold */
+  margin-top: 10px; /* Adds space between image and caption */
+
+}
+
+
+img {
+  /* width: 300px;
+  height: 300px; */
+  max-width: 500px; /* Ensures images don't exceed their container's width */
+  height: auto; /* Maintains aspect ratio */
+
+  object-fit: cover; /* fils container but keeps the aspect ratio the same */
+  border: 5px solid rgba(0, 0, 0, 1); /*  added border to images */
+
 }
